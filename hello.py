@@ -22,8 +22,8 @@ app = Flask(__name__)
 # line_bot_api = LineBotApi(CHANNEL_ACCESS_TOKEN)
 # handler = WebhookHandler(CHANNEL_SECRET)
 
-line_bot_api = LineBotApi("AvzyVLhonwyD4/whnCUG83rVP3GFhMCGJgms1awDe14Ii+DkRkofKkb5IXw8EplAlFyrmgAiHzvChcA93HrtUFha7uENwXHTSQKskL0LAzS7rqJU4orF/MPTuSSbUrl1HbOozQkjMajlXEnxVXpQ2gdB04t89/1O/w1cDnyilFU=")
-handler = WebhookHandler("b2781bdec0133495584a40adc0fff00b")
+line_bot_api = LineBotApi("DfDcNGFPREH1hghXwwXfWZ30iMa9dxjDyekIkUnWUsyAYBHbJAL6PPPUM8GvIuJClFyrmgAiHzvChcA93HrtUFha7uENwXHTSQKskL0LAzQmEAMyaElQnAmCGPXShDQUpUHzOnPnWSVaZyz8XtiZsAdB04t89/1O/w1cDnyilFU=")
+handler = WebhookHandler("b986779e8adf0139bb37346cae2e00ec")
 
 @app.route("/callback", methods=['POST'])
 def callback():
@@ -45,7 +45,7 @@ def handle_message(event):
     line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
 
 def talk_ai(word):
-    apikey = 'DZZZUC4mmA2jZ6pdcyQetKEgP9QAjR7I'
+    apikey = 'DZZejeeQuT5pnkCbLZtaLHUg2a5ftDhL'
     client = pya3rt.TalkClient(apikey)
     client_talk = client.talk(word)
     return client_talk['results'][0]['reply']
